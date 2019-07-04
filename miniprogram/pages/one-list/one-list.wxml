@@ -1,0 +1,9 @@
+<view class='one-list'>
+<view class='one-item' wx:for="{{list}}" wx:key="{{item._id}}" bindtap="bookDetail" data-item="{{item}}">
+<image class='one-icon' src="{{item.cover}}"></image>
+<view class='item-content'>
+<view class='short-title'>{{item.title}}</view>
+<view class='short-intro'>{{item.shortIntro}}</view>
+</view>
+</view>
+</view>

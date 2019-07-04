@@ -1,0 +1,68 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
+	"appid": "wxa9d27aad8d0cf412",
+	"projectname": "novel",
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "详情页",
+					"pathName": "pages/read-book/read-book",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "书单",
+					"pathName": "pages/single-book/single-book",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "书单",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

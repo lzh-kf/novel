@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/book-detail/book-detail",
+    "pages/read-book/read-book",
+    "pages/search/search",
+    "pages/search-list/search-list",
+    "pages/book-shelf/book-shelf",
+    "pages/rank-list/rank-list",
+    "pages/book-classify/book-classify",
+    "pages/classify-child/classify-child",
+    "pages/read-picture/read-picture",
+    "pages/guess-list/guess-list",
+    "pages/single-rank/single-rank",
+    "pages/book-list/book-list",
+    "pages/single-rank/single-book",
+    "pages/single-book/single-book",
+    "pages/test"
+  ],
+  "usingComponents": {
+    "bookList": "components/book-list/book-list",
+    "wxSlider": "components/wx-slider/wx-slider",
+    "loadMore": "components/load-more/load-more"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "爱小说",
+    "navigationBarTextStyle": "black",
+    "pageOrientation": "auto"
+  },
+  "tabBar": {
+    "selectedColor": "#d81e06",
+    "color": "#bfbfbf",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "书城",
+        "iconPath": "./static/tabs/un-book-city.png",
+        "selectedIconPath": "./static/tabs/book-city.png"
+      },
+      {
+        "pagePath": "pages/book-shelf/book-shelf",
+        "text": "书架",
+        "iconPath": "./static/tabs/un-book-shelf.png",
+        "selectedIconPath": "./static/tabs/book-shelf.png"
+      }
+    ]
+  }
+}

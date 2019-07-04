@@ -1,0 +1,186 @@
+.book-list {
+  width: 100%;
+  height: 100%;
+}
+
+.book-change {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  right: 0;
+  width: 24%;
+  height: 80rpx;
+  color: red;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.channel-nav, .second-nav, .first-nav {
+  position: fixed;
+  left: 0;
+  z-index: 1;
+  height: 80rpx;
+  width: 100%;
+  font-size: 28rpx;
+  color: rgb(197, 194, 194);
+  display: flex;
+  background: #fff;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid rgb(214, 212, 212);
+}
+
+.book-list .channel-nav {
+  top: 0rpx;
+  padding-right: 60%;
+  justify-content: space-around;
+}
+
+
+.book-list .channel-item {
+  width: 25%;
+}
+.book-list .first-nav {
+  top: 80rpx;
+  padding-right: 40%;
+  justify-content: space-around;
+}
+
+.book-list .second-nav {
+  padding: 0 25rpx;
+  box-sizing: border-box;
+  top: 160rpx;
+  justify-content: space-between;
+}
+
+.channel-txt, .second-txt, .first-txt {
+  margin-top: 10rpx;
+  height: 60%;
+  display: flex;
+  padding: 10rpx;
+  align-items: center;
+  justify-content: center;
+  flex-flow: nowrap;
+}
+
+.book-list .first-check {
+  color: red;
+}
+
+.book-list .hidden-nav {
+  margin-top: 240rpx;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.book-list .hidden-item {
+  width: 100%;
+  padding: 25rpx;
+  box-sizing: border-box;
+}
+
+.book-list .hidden-child .type-check {
+  border: 2rpx solid red;
+  color: red;
+  box-sizing: border-box;
+}
+
+.book-list .hidden-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+  color: rgb(197, 194, 194);
+}
+
+.book-list .hidden-child {
+  display: flex;
+  width: 100%;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.book-list .child-item {
+  border-radius: 20rpx;
+  font-size: 28rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+  color: rgb(197, 194, 194);
+  border: 2rpx solid rgb(197, 194, 194);
+  display: flex;
+  padding: 2rpx 10rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-list .book-content {
+  margin-top: 240rpx;
+  width: 100%;
+  padding: 25rpx;
+  box-sizing: border-box;
+}
+
+.book-list .book-item {
+  height: 200rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-list .book-left {
+  height: 100%;
+  width: 65%;
+}
+
+.book-list .book-title {
+  width: 100%;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book-list .book-num {
+  font-size: 24rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  color: rgb(214, 212, 212);
+}
+
+.book-list .book-hint {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: rgb(214, 212, 212);
+}
+
+.book-list .book-right {
+  height: 100%;
+  width: 30%;
+}
+
+.book-list .book-right {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-list .second-img {
+  margin-top: 10%;
+  height: 80%;
+  width: 30;
+}
+
+.book-list .main-img {
+  position: absolute;
+  top: 5%;
+  left: 21%;
+  height: 90%;
+  width: 58%;
+}

@@ -1,0 +1,109 @@
+.read-book {
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #e9e6d0;
+}
+
+.book-content {
+  line-height: 70rpx;
+}
+
+.book-fix {
+  top: 60rpx;
+}
+
+.book-title {
+  font-size: 35rpx;
+  font-weight: 600;
+  margin: 10rpx;
+}
+
+.font-edit {
+  border-top: 2rpx solid rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10rpx 10%;
+  background: #e9e6d0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 340rpx;
+}
+
+.edit-font {
+  display: flex;
+  height: 70rpx;
+  align-items: center;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+
+.book-catalog {
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: 600;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+
+.size-title {
+  font-size: 36rpx;
+  font-weight: 600;
+}
+
+.edit-light {
+  display: flex;
+  align-items: center;
+}
+
+.light-size {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.size-img {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.size-img image {
+  width: 100%;
+  height: 100%;
+}
+
+.catalog-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  font-size: 34rpx;
+  background: #e9e6d0;
+}
+
+.go-back {
+  z-index: 3;
+  position: fixed;
+  top: 6rpx;
+  right: 45rpx;
+  font-size: 36rpx;
+  width: 50%;
+  font-weight: bold;
+  color: #000;
+  text-align: right;
+}
+
+.catalog-item {
+  height: 75rpx;
+  line-height: 75rpx;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

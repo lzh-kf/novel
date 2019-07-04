@@ -1,0 +1,34 @@
+.read-picture {
+  width: 100%;
+}
+
+image {
+  width: 100%;
+}
+
+.chapters-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.go-back {
+  position: fixed;
+  z-index: 2;
+  top: 0rpx;
+  right: 40rpx;
+  font-size: 30rpx;
+  color: red;
+}
+
+.list-item {
+  width: 100%;
+  height: 60rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
