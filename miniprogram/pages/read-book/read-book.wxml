@@ -1,0 +1,28 @@
+<view class="read-book">
+  <view wx:for="{{list}}" wx:key="{{item}}" class='book-item' bindtap="showEdit">
+    <view class='book-title' style='font-size:{{fontSize}}rpx'>{{item.title}}</view>
+    <text class="book-content" style='font-size:{{fontSize}}rpx'>{{item.body}}</text>
+  </view>
+  <view class='font-edit' wx:if="{{editFlag}}">
+  <view class="book-catalog add-book" bindtap="addBookShelf">加入书架</view>
+  <view class="book-catalog" bindtap="catalog">目录</view>
+    <view class='edit-light'>
+      <image class="light-size" src="../../static/img/light.png"></image>
+      <wxSlider style="width:600rpx" value="{{lightValue}}" bindslider="setLight" />
+    </view>
+    <view class='edit-font'>
+      <view class='size-img' bindtap="editSize" data-flag="{{1}}">
+        <image src="../../static/img/reduce.png"></image>
+      </view>
+      <view class='size-title'>字体编辑</view>
+      <view class='size-img' bindtap="editSize" data-flag="{{0}}">
+        <image src="../../static/img/add.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 目录列表 -->
+  <view class="catalog-list" wx:if="{{openChapter}}">
+  <view class='go-back' bindtap="goBack">返回</view>
+  <view class="catalog-item" wx:for="{{chapters}}" data-index="{{index}}" data-item="{{item}}" bindtap="jumpCatalog" wx:key="{{item}}">{{item.title}}</view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="classify-child">
+  <view class='classify-type'>
+    <view class='type-item' wx:for="{{typeInfo.list}}" wx:key="{{item}}" bindtap="firstNav" data-type="{{item.value}}" data-index="{{index}}">
+      <text class='{{index === typeInfo.check?"check-item":""}}'>{{item.title}}</text>
+    </view>
+  </view>
+  <view class='classify-major' wx:if="{{majorInfo.list.length}}">
+    <view class='major-item' wx:for="{{majorInfo.list}}" wx:key="{{item}}" bindtap="secondNav" data-minor="{{item}}" data-index="{{index}}">
+      <text class='{{index === majorInfo.check&&index?"check-items":"" }} {{index === majorInfo.check&&!index?"check-all":"" }}'>{{item}}</text>
+    </view>
+  </view>
+  <view class='classify-book {{majorInfo.list.length?majorInfo.list.length>5?"second-tabs":"second-tab":""}}'>
+    <bookList bindbookDetail="bookDetail" bookList="{{bookList}}" />
+    <loadMore loadMore="{{loadmore}}" bindmore="more"/>
+  </view>
+</view>

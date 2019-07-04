@@ -1,0 +1,45 @@
+<view class="book-list">
+  <!-- 频道选择 -->
+  <view class='channel-nav'>
+    <view class='channel-item' wx:for="{{channelInfo.list}}" wx:key="{{item}}">
+      <text class='channel-txt {{index === channelInfo.check?"first-check":""}}' data-index="{{index}}" data-key="{{item.key}}" bindtap="channelNav">{{item.value}}</text>
+    </view>
+  </view>
+  <!-- 筛选 -->
+  <view class="book-change" bindtap="chnageType">筛选类型</view>
+  <!-- 一级导航 -->
+  <view class='first-nav'>
+    <view class='first-item' wx:for="{{firstInfo.list}}" wx:key="{{item}}">
+      <text class='first-txt {{index === firstInfo.check?"first-check":""}}' data-index="{{index}}" data-params="{{item.params}}" bindtap="firstNav">{{item.value}}</text>
+    </view>
+  </view>
+  <!-- 二级导航 -->
+  <view class='second-nav'>
+    <view class='second-item' wx:for="{{secondInfo.list}}" wx:key="{{item}}">
+      <view class='second-txt {{index === secondInfo.check?"first-check":""}}' data-item="{{item}}" data-index="{{index}}" bindtap='secondNav'>{{item}}</view>
+    </view>
+  </view>
+  <!-- 二级未展开导航 -->
+  <view class='hidden-nav' wx:if="{{typeFLag}}">
+    <view class='hidden-item' wx:for="{{bookType}}" wx:key="{{item}}">
+      <view class='hidden-title'>{{item.name}}</view>
+      <view class='hidden-child'>
+        <view bindtap="typeChange" data-item="{{item}}" data-index="{{index}}" data-inx="{{_index}}" class='child-item {{_index === item.check?"type-check":""}}' wx:for="{{item.tags}}" wx:key="{{_item}}" wx:for-index="_index" wx:for-item="_item">{{_item}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 书单列表 -->
+  <view class='book-content' wx:else>
+    <view class='book-item book-item{{index}}' wx:for="{{bookList}}" wx:key="{{item}}" bindtap='bookDetail' data-id="{{item._id}}">
+      <view class='book-left'>
+        <view class='book-title'>{{item.title}}</view>
+        <view class='book-num'>{{item.bookCount}}本|{{item.collectorCount}}收藏</view>
+        <view class='book-hint'>{{item.desc}}</view>
+      </view>
+      <view class='book-right'>
+        <image wx:for="{{item.covers}}" class='second-img' wx:for-index="img" wx:for-item="imgIndex" wx:if="{{img}}" src="{{item.flag?imgIndex:item.defaultCover}}" wx:key="{{imgIndex}}"></image>
+        <image class='main-img' src="{{item.flag?item.covers[0]:item.defaultCover}}"></image>
+      </view>
+    </view>
+    <loadMore loadMore="{{loadmore}}" bindmore="more" /> </view>
+</view>
